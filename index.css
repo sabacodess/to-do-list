@@ -12,8 +12,12 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url(./images/todo2-image.jpg)no-repeat center center/cover;
+    background: radial-gradient(circle, #3a3a3a, #1a1a1a, #000000);
+
+
+    /* background: url(/images/todo2-image.jpg)no-repeat center center/cover; */
     font-family: "roboto","san-serif";
+    /* background: #212121; */
 }
 img{
     background: transparent;
@@ -28,7 +32,7 @@ img{
     padding: 0 24px;
 }
 .todo{
-    width: 100%;
+     width: 100%; 
     max-width: 400px;
     padding: 2rem;
     display: flex;
@@ -69,14 +73,15 @@ img{
     padding: 8px;
     color: #ffffff;
     border-radius: 50%;
-    background: rgba(45, 65, 68, 0.3);
-    border:3px solid rgba(45, 65, 68, 0.3);
+    background: rgba(255, 194, 209, 0.3);
+    border:3px solid rgba(255, 194, 209, 0.3);
     transform: all 0.2s ease;
     cursor: pointer;
 }
 .inputarea button:hover{
     transform: scale(1.1);
-    background: rgba(33, 166, 186, 0.3);
+    background:#ff9aa2;
+
 }
 
 .container2{
@@ -87,4 +92,361 @@ img{
 
 #task-li{
     width: 100%;
+}
+#task-li li {
+    width:350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:  10px;
+    padding:8px 10px ;
+    position: relative;
+    font-size: 1.2rem;
+    background: rgba(255, 194, 209, 0.3);
+    transform:  box-shadow 0.2s ease;
+    color: #ffffff;
+    border-radius: 30px
+}
+#task-li li:hover{
+    box-shadow: 0 0 10px rgba(255, 194, 209, 0.3)
+}
+
+#task-li li .checkbox{
+    min-width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 2px solid rgba(255, 194, 209, 0.3);
+    background: transparent;
+    border-radius: 50%;
+    appearance: none;
+    transform: all 0.2s ease;
+}
+#task-li li .checkbox:checked{
+    background:#ff9aa2; ;
+    transform: scale(1.1);
+}
+#task-li li .checkbox:checked::before{
+    content: '\2713';
+    vertical-align: middle;
+    display: flex;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+}
+#task-li li span{
+    flex:1;
+    margin-left :10px;
+    word-wrap: break-word;
+}
+.buttons{
+    display: flex;
+    gap:10px;
+    margin-left: auto;
+}
+.buttons button{
+    background: rgba(33, 166, 186, 0.3);
+    height:30px;
+    width:30px;
+    transform: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons button:hover{
+    transform: scale(1.1);
+    background: #ff9aa2;;
+}
+
+
+.buttons .del-btn{
+    background: rgba(255, 194, 209, 0.3)
+}
+.shake {
+    animation: shake 0.6s ease-in-out; 
+    border: 2px solid #ff4444  !important;
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
+    20%, 40%, 60%, 80% { transform: translateX(8px); }
+}
+
+/* Responsive Media Queries - Add these to your existing CSS */
+
+/* Large tablets and small desktops (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .todo {
+        max-width: 380px;
+        padding: 1.8rem;
+    }
+    
+    #task-li li {
+        width: 320px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Tablets (481px - 768px) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .todo {
+        max-width: 100%;
+        width: 95%;
+        padding: 1.5rem;
+        gap: 25px;
+    }
+    
+    #task-li li {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 12px;
+    }
+    
+    .inputarea input {
+        padding: 12px 15px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .inputarea button {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Large phones (376px - 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        height: 100vh;
+        padding: 10px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+        min-height: 100vh;
+        justify-content: flex-start;
+        padding-top: 50px;
+    }
+    
+    .todo {
+        width: 100%;
+        max-width: none;
+        padding: 1.2rem;
+        gap: 20px;
+        border-radius: 15px;
+        min-height: auto;
+    }
+    
+    .inputarea {
+        flex-direction: row;
+        gap: 8px;
+    }
+    
+    .inputarea input {
+        padding: 14px 16px;
+        font-size: 16px;
+        border-radius: 18px;
+    }
+    
+    .inputarea button {
+        padding: 12px;
+        font-size: 1.1rem;
+        min-width: 40px;
+        height: 40px;
+    }
+    
+    #task-li li {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 12px 14px;
+        border-radius: 25px;
+        margin-bottom: 12px;
+    }
+    
+    #task-li li span {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    
+    .buttons button {
+        width: 28px;
+        height: 28px;
+        font-size: 0.75rem;
+    }
+}
+
+/* Small phones (up to 375px) */
+@media screen and (max-width: 375px) {
+    .container {
+        padding: 0 12px;
+        padding-top: 40px;
+    }
+    
+    .todo {
+        padding: 1rem;
+        gap: 18px;
+        border-radius: 12px;
+    }
+    
+    .inputarea input {
+        padding: 12px 14px;
+        font-size: 16px;
+    }
+    
+    .inputarea button {
+        padding: 10px;
+        min-width: 38px;
+        height: 38px;
+    }
+    
+    #task-li li {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+        margin-bottom: 10px;
+    }
+    
+    #task-li li .checkbox {
+        min-width: 18px;
+        height: 18px;
+    }
+    
+    .buttons {
+        gap: 8px;
+    }
+    
+    .buttons button {
+        width: 26px;
+        height: 26px;
+        font-size: 0.7rem;
+    }
+}
+
+/* Extra small phones (up to 320px) */
+@media screen and (max-width: 320px) {
+    .container {
+        padding: 0 10px;
+        padding-top: 30px;
+    }
+    
+    .todo {
+        padding: 0.8rem;
+        gap: 15px;
+    }
+    
+    .inputarea {
+        gap: 6px;
+    }
+    
+    .inputarea input {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+    
+    .inputarea button {
+        padding: 8px;
+        min-width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+    
+    #task-li li {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+    
+    #task-li li span {
+        font-size: 0.85rem;
+        margin-left: 8px;
+    }
+    
+    .buttons button {
+        width: 24px;
+        height: 24px;
+        font-size: 0.65rem;
+    }
+}
+
+/* Landscape orientation for phones */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    body {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .container {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .todo {
+        gap: 15px;
+        padding: 1rem;
+    }
+}
+
+/* High DPI screens */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi) {
+    .inputarea button,
+    .buttons button {
+        border-width: 1px;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    .shake {
+        animation: none;
+        border: 2px solid #ff4444 !important;
+    }
+    
+    .inputarea button:hover,
+    .buttons button:hover,
+    #task-li li .checkbox:checked {
+        transform: none;
+    }
+    
+    .inputarea button,
+    .buttons button,
+    #task-li li .checkbox {
+        transition: none;
+    }
+}
+
+/* Dark mode support (if user prefers dark mode) */
+@media (prefers-color-scheme: dark) {
+    /* Your existing styles already work well for dark mode */
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+    
+    .todo {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        background: white;
+        color: black;
+    }
+    
+    .inputarea,
+    .buttons {
+        display: none;
+    }
+    
+    #task-li li {
+        background: white;
+        color: black;
+        border: 1px solid #ddd;
+    }
 }
