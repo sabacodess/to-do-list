@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./images/todo2-image.jpg)no-repeat center center/cover;
+    font-family: "roboto","san-serif";
+}
+img{
+    background: transparent;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 0 24px;
+}
+.todo{
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color:#ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    border: 3px solid rgba(45, 65, 68, 0.3);
+    backdrop-filter: blur(10px);
+}
+.inputarea{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.inputarea input{
+    flex: 1;
+    padding: 10px 17px ;
+    border:none;
+    outline: none;
+    border-radius: 22px;
+    background: rgba(255, 194, 209, 0.3);
+    color:#dbdbdb
+}
+.inputarea input::placeholder{
+    color: #bcbcbc;
+}
+.inputarea button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 1.1rem;
+    padding: 8px;
+    color: #ffffff;
+    border-radius: 50%;
+    background: rgba(45, 65, 68, 0.3);
+    border:3px solid rgba(45, 65, 68, 0.3);
+    transform: all 0.2s ease;
+    cursor: pointer;
+}
+.inputarea button:hover{
+    transform: scale(1.1);
+    background: rgba(33, 166, 186, 0.3);
+}
+
+.container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#task-li{
+    width: 100%;
+}
