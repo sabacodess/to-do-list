@@ -176,7 +176,12 @@ img{
     10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); }
     20%, 40%, 60%, 80% { transform: translateX(8px); }
 }
-
+#msg {
+    color: #00ff00;
+    margin-top: 10px;
+    display: block;
+    font-size: 16px;
+}
 /* Responsive Media Queries - Add these to your existing CSS */
 
 /* Large tablets and small desktops (768px - 1024px) */
